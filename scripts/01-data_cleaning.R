@@ -9,6 +9,7 @@
 
 # library(haven)
 library(tidyverse)
+library(dplyr)
 # Read in the raw data 
 raw_data <- readr::read_csv("inputs/data/raw_data.csv")
 
@@ -20,6 +21,10 @@ reduced_data <-
 # remove old data from the environment 
 rm(raw_data)
 
-# now i need to filter the data to only include the ones 
-# which include an automobile and alcohol 
+ 
+# retaining only the entries which involve an automobile and alcohol
+selected_data <- filter(reduced_data, AUTOMOBILE == "Yes" & ALCOHOL == "Yes")
+
+
+
 
