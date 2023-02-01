@@ -25,6 +25,22 @@ rm(raw_data)
 # retaining only the entries which involve an automobile and alcohol
 selected_data <- filter(reduced_data, AUTOMOBILE == "Yes" & ALCOHOL == "Yes")
 
+# remove unfiltered data from the environment
+rm(reduced_data)
+
+write.csv(selected_data, "inputs/data/selected_data.csv")
+
+
+# TESTS 
+nrow(selected_data) == 755
+
+sum(selected_data$AUTOMOBILE == "Yes") == 755
+
+sum(selected_data$ALCOHOL == "Yes") == 755
+
+
+
+
 
 
 
