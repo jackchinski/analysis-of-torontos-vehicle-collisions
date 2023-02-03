@@ -37,6 +37,11 @@ sum(selected_data$AUTOMOBILE == "Yes") == 755
 
 sum(selected_data$ALCOHOL == "Yes") == 755
 
+sum(selected_data$INJURY == "Fatal") == 42
+
+
+
+# STATS FOR TABLE
 fatal_count <- sum(selected_data$INJURY == "Fatal") # 42 total
 
 major_count <- sum(selected_data$INJURY == "Major") #249 total
