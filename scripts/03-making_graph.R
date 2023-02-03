@@ -40,3 +40,6 @@ ggplot(group_by_year_accident,aes(x=INJURY, y = Count_Accidents, fill=INJURY)) +
   theme(axis.text.x=element_blank(),
         axis.ticks.x=element_blank()) +
   labs(y = "Number of Accidents", x = "Type of Injury from Accident") 
+
+
+

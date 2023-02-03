@@ -7,7 +7,6 @@
 # - Need to have downloaded the Motor Vehicle Collisions with KSI Data and saved it to inputs/data
 
 
-# library(haven)
 library(tidyverse)
 library(dplyr)
 # Read in the raw data 
@@ -37,6 +36,23 @@ nrow(selected_data) == 755
 sum(selected_data$AUTOMOBILE == "Yes") == 755
 
 sum(selected_data$ALCOHOL == "Yes") == 755
+
+fatal_count <- sum(selected_data$INJURY == "Fatal") # 42 total
+
+major_count <- sum(selected_data$INJURY == "Major") #249 total
+
+minimal_count <- sum(selected_data$INJURY == "Minimal") # 63 total
+
+minor_count <- sum(selected_data$INJURY == "Minor")  # 131 total
+
+none_count <- sum(selected_data$INJURY == "None")  # 270 total
+
+# fatal accounted for 5.56% of accidents 
+# meanwhile major accounted for 33% 
+# none 35.76 % 
+
+
+
 
 
 
